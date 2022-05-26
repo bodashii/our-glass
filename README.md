@@ -7,7 +7,7 @@ Interactive MERN SPA Project | Project 3 / group 7
 Our-Glass is a multifunction countdown app, that allows the user to keep track of upcoming personal or shared events.
 
 ## User-Story
-As a busy person, I'd like to have an app that keeps me in check with the things that are going on in my everyday life and beable to catch up with my freinds and familys' ooccassions.
+As a busy person, I'd like to have an app that keeps me in check with the things that are going on in my everyday life and be able to catch up with my freinds and familys' ooccassions.
 
 ## Built With:
 
@@ -18,6 +18,7 @@ As a busy person, I'd like to have an app that keeps me in check with the things
 ## Screenshot
 
 ## Contribution
+Authored by:
 Nicolas Y.
 Brandon H.
 Antony Q.
