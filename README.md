@@ -18,9 +18,8 @@ As a busy person, I'd like to have an app that keeps me in check with the things
 ## Screenshot
 
 ## Contribution
-Authored by:
-Nicolas Y.
-Brandon H.
-Antony Q.
-Mark E.
-Vivianna M.
+####Nicolas Y.
+####Brandon H.
+####Antony Q.
+####Mark E.
+####Vivianna M.
