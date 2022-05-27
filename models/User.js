@@ -36,11 +36,12 @@ const userSchema = new Schema({
 )
 
 // pre-save middleware to create a password
-userSchema.pre('save', async function() {
+userSchema.pre('save', async function(next) {
     if (this.isNew || this.isModified('password')) {
         const saltRounds = 10;
         this.password = await bcrypt.hash(this.password, saltRounds);    }
-})
+        next();
+});
 
 userSchema.methods.isCorrectPassword = async function(password) {
     return bcrypt.compare(password, this.password)
