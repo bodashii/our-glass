@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 const dateFormat = require('..src/utils/date-format');
-const encouragementSchema = require('./Encouragement')
+const commentSchema = require('./Comment')
 
 const tickerSchema = new Schema({
     title: {
@@ -22,7 +22,7 @@ const tickerSchema = new Schema({
         type: 'string',
         required:true
     },
-    encouragements: [encouragementSchema]
+    comments: [commentSchema]
 },
 {
     toJson: {
