@@ -22,6 +22,10 @@ const tickerSchema = new Schema({
         type: 'string',
         required:true
     },
+    public: {
+        type: 'boolean',
+        required: true
+    },
     comments: [commentSchema]
 },
 {
@@ -30,8 +34,9 @@ const tickerSchema = new Schema({
     }
 })
 
-tickerSchema.virtual('encouragementCount').get(function () {
-    return this.encouragements.length
+// may not need this, but wanted to include it just in case
+tickerSchema.virtual('commentCount').get(function () {
+    return this.comments.length
 })
 
 const Ticker = model('Thought', tickerSchema);

@@ -22,3 +22,5 @@ const commentSchema = new Schema({
         getters: true
     }
 })
+
+module.exports = commentSchema
