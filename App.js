@@ -1,21 +1,11 @@
 import React from 'react';
-import { StyleSheet, View, Text, Image, ImageBackground } from "react-native";
-import Dash from "./src/components/Dash"
+import Dash from './src/components/Dash';
+// import {StyleSheet, TouchableOpacity, Text, View} from 'react-native';
+// import { render } from 'react-native/Libraries/Renderer/implementations/ReactNativeRenderer-prod';
 
-/* add function to check JWT and direct to login/signup 
-if authorized load dash */
-
-export default function App() {
+const App = () => {
   return <Dash />
-}
+    
+};
 
-// function Router() {
-//   const isUserSignedIn = () => false;
-
-//   return (
-//     isUserSignedIn() ?
-//       <Text>Congrats! You're signed in.</Text>
-//       :
-//       <Dash />
-//   )
-// }
+export default App;
