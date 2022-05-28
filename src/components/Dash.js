@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, Button } from "react-native";
+import { Text, View, Button,} from "react-native";
 
 
 
@@ -18,9 +18,15 @@ function Dash({ navigation }) {
     >
       <Text>ourGlass</Text>
       <Text> developed by: Antony, Brandon, Mark, Nicolas, Vivianna</Text>
+      
+
       <Button
         title='Account'
         onPress={() => navigation.navigate('Account')}
+      />
+      <Button
+        title='Create TimeBomb'
+        onPress={() => navigation.navigate('TickerForm')}
       />
     </View>
   );
