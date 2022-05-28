@@ -1,6 +1,9 @@
 import React from "react";
 import { Text, View } from "react-native";
 
+// check JWT to see if user is logged in, if not send to signup/login
+
+
 export default function Dash() {
   return (
     <View

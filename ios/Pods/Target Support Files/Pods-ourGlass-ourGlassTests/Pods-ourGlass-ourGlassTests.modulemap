@@ -1,6 +1,0 @@
-module Pods_ourGlass_ourGlassTests {
-  umbrella header "Pods-ourGlass-ourGlassTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

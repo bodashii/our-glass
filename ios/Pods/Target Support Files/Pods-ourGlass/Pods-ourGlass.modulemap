@@ -1,6 +1,0 @@
-module Pods_ourGlass {
-  umbrella header "Pods-ourGlass-umbrella.h"
-
-  export *
-  module * { export * }
-}
