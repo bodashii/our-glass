@@ -6,6 +6,19 @@ import { Text, View, Pressable } from "react-native";
 // check JWT to see if user is logged in, if not send to signup/login
 
 
+// add light/dark mode toggle
+
+// change username
+
+// change password
+
+// update email
+
+// delete account
+
+// sign out function and button
+
+
 function Account({ navigation }) {
   return (
     <View 

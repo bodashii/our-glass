@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import { Text, Switch, ScrollView, SafeAreaView, Picker, StyleSheet, TextInput, TouchableOpacity, Button, View} from "react-native";
+import { Text, Switch, ScrollView, SafeAreaView,  StyleSheet, TextInput, TouchableOpacity, Button, View} from "react-native";
 import DateTimePicker from '@react-native-community/datetimepicker';
+
+// use moment.js to grab current time and then get the difference
+// use function to create ticker element
 
 function TickerForm({ navigation }) {
   const [chosenDate, setChosenDate] = useState(new Date());
@@ -83,7 +86,7 @@ const styles = StyleSheet.create({
    },
    submitButtonText:{
       color: 'white',
-      textalign: 'center',
+      textAlign: 'center',
    },
    titleText: {
      fontSize: 16
