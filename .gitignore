@@ -6,8 +6,6 @@ bare-apps
 
 
 # dependencies
-.DS_Store
-
 /node_modules
 /.pnp
 .pnp.js
