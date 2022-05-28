@@ -21,4 +21,8 @@
     "@babel/core": "^7.12.9"
   },
   "private": true
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c1c90be1b5c1d6ae47a5c267c38cb3ad561f1948
