@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
    },
    submitButtonText:{
       color: 'white',
-      textalign: 'center',
+      textAlign: 'center',
    },
    titleText: {
      fontSize: 16
