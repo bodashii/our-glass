@@ -1,10 +1,15 @@
-// function Account() {
-//     const [userVal, setUserVal] = useState("");
-//     const [passVal, setPassVal] = useState("");
+import React from "react";
+import { Text, View } from "react-native";
 
-//     return (
-//         <View style={styles.container}>
+function Account() {
+  // const [userVal, setUserVal] = useState("");
+  // const [passVal, setPassVal] = useState("");
 
-//         </View>
-//     )
-// }
+  return (
+    <View>
+          <Text>Lets login or Sign up</Text>
+    </View>
+  );
+}
+
+export default Account;
