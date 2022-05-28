@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, Button } from "react-native";
+import { Text, View, Pressable } from "react-native";
 
 
 
@@ -8,7 +8,7 @@ import { Text, View, Button } from "react-native";
 
 function Account({ navigation }) {
   return (
-    <View
+    <View 
       // eslint-disable-next-line react-native/no-inline-styles
       style={{
         flex: 1,
@@ -17,12 +17,14 @@ function Account({ navigation }) {
       }}
     >
       <Text>This is your account!</Text>
-      <Button
-        title='Dash'
-        onPress={() => navigation.navigate('Dash')}
+      <Pressable
+        title='ourGlass'
+        onPress={() => navigation.navigate('ourGlass')}
       />
     </View>
   );
 }
+
+
 
 export default Account;
