@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Text, View, Button,} from "react-native";
+import { StyleSheet, Text, View, Pressable, TextInput, TouchableOpacity } from "react-native";
+
 
 
 
@@ -8,28 +9,32 @@ import { Text, View, Button,} from "react-native";
 
 function Dash({ navigation }) {
   return (
-    <View
-      // eslint-disable-next-line react-native/no-inline-styles
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>ourGlass</Text>
-      <Text> developed by: Antony, Brandon, Mark, Nicolas, Vivianna</Text>
+    <View style={styles.container}>
+      <Text>Tickers</Text>
+      <Text>Ticked Off</Text>
+      <TextInput placeholder='username' type='text' />
+      <TouchableOpacity><Text>Submit</Text></TouchableOpacity>
       
 
-      <Button
+      <Pressable
         title='Account'
         onPress={() => navigation.navigate('Account')}
       />
-      <Button
+      <Pressable
         title='Create TimeBomb'
         onPress={() => navigation.navigate('TickerForm')}
       />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
 export default Dash;
