@@ -11,7 +11,7 @@ function Dash({ navigation }) {
   return (
     <View style={styles.container}>
       <Text>Tickers</Text>
-      <Text>Ticked Off</Text>
+      <Text>Disappointment</Text>
       <TextInput placeholder='username' type='text' />
       <TouchableOpacity><Text>Submit</Text></TouchableOpacity>
       
