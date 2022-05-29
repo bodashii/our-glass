@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { StyleSheet, Image, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 import Dash from '../src/components/Dash';
 import Account from '../src/components/Account';

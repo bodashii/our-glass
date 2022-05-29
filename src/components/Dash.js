@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, Pressable, TextInput, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, Pressable, TextInput, TouchableOpacity, Button } from "react-native";
+import DatePicker from 'react-native-date-picker'
 
 
 
@@ -11,9 +12,24 @@ function Dash({ navigation }) {
   return (
     <View style={styles.container}>
       <Text>Tickers</Text>
+      <Button title="Create Ticker" onPress={() => setOpen(true)} />
+      <DatePicker
+        modal
+        open={open}
+        date={date}
+        onConfirm={(date) => {
+          setOpen(false)
+          setDate(date)
+        }}
+        onCancel={() => {
+        setOpen(false)
+        }}
+      />
       <Text>Disappointment</Text>
       <TextInput placeholder='username' type='text' />
       <TouchableOpacity><Text>Submit</Text></TouchableOpacity>
+
+      
       
 
       <Pressable
