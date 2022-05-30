@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { Text, View, Pressable } from "react-native";
+import * as RN from 'react-native';
+
+import Settings from './SettingView'
 
 
 
@@ -21,20 +23,7 @@ import { Text, View, Pressable } from "react-native";
 
 function Account({ navigation }) {
   return (
-    <View 
-      // eslint-disable-next-line react-native/no-inline-styles
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>This is your account!</Text>
-      <Pressable
-        title='ourGlass'
-        onPress={() => navigation.navigate('ourGlass')}
-      />
-    </View>
+      <Settings />
   );
 }
 

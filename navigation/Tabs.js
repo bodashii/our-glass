@@ -6,6 +6,7 @@ import Dash from '../src/components/Dash';
 import Account from '../src/components/Account';
 import TickerForm from '../src/components/TickerForm';
 
+
 const Tab = createBottomTabNavigator();
 
 const Tabs = () => {
