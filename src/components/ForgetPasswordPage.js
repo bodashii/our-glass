@@ -17,7 +17,7 @@ export default function ForgetPasswordPage() {
     <View style={styles.container}>
       <Text>Reset your password</Text>
       <Text>Enter your email address and we will send you a new password</Text>
-      <TextInput name="fpassword" placeholder="password" />
+      <TextInput name="password" placeholder="password" />
       <TextInput name="email" placeholder="email" />
       <TouchableOpacity
         style={styles.submitButton}
@@ -37,6 +37,8 @@ export default function ForgetPasswordPage() {
         />
       </View>
     </View>
+  );
+}
 
     // <div className="text-center m-5-auto">
     //     <h2>Reset your password</h2>
@@ -55,8 +57,6 @@ export default function ForgetPasswordPage() {
     //         <p><Link to="/">Back to Homepage</Link>.</p>
     //     </footer>
     // </div>
-      );
-}
 
       const styles = StyleSheet.create({
         container: {

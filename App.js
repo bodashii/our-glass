@@ -13,7 +13,6 @@ export default function App() {
 
   return (
     <Router>
-      <div>
         <Routes>
           <Route exact path="/" component={LandingPage} />
           <Route path="/login" component={LoginPage} />
@@ -21,7 +20,6 @@ export default function App() {
           <Route path="/forget-password" component={ForgetPasswordPage} />
           <Route path="/home" component={HomePage} />
         </Routes>
-      </div>
     </Router>
   );
 }
