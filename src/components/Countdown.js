@@ -86,7 +86,7 @@ const SVGCircle = ({ radius }) => (
         <Path
             fill="none"
             stroke="white"
-            stroke-width="1"
+            strokeWidth="1"
             d={describeArc(50, 50, 28, 0, radius)}
         />
     </Svg>

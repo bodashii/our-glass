@@ -36,7 +36,7 @@ function TickerForm({ navigation }) {
           />
       {/* <Text>selected: {date.toLocaleString()}</Text> */}
         <Text style={styles.titleText}>Deadline:</Text>
-        <DateTimePicker
+        {/* <DateTimePicker
           testID="dateTimePicker"
           value= {chosenDate}
           mode="datetime"
@@ -44,7 +44,7 @@ function TickerForm({ navigation }) {
           display= "spinner"
           onDateChange={setChosenDate}
           textColor="cadetblue"
-        />
+        />  */}
         <Switch
         trackColor={{ false: "#767577", true: "#81b0ff" }}
         thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
