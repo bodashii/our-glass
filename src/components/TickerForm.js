@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Text, Switch, ScrollView, SafeAreaView,  StyleSheet, TextInput, TouchableOpacity, Button, View} from "react-native";
 import DateTimePicker from '@react-native-community/datetimepicker';
+import { NavigationEvents } from 'react-navigation';
 
 // use moment.js to grab current time and then get the difference
 // use function to create ticker element
@@ -8,13 +9,34 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 function TickerForm({ navigation }) {
   const [chosenDate, setChosenDate] = useState(new Date());
 
+  async function onSubmit(e) {
+    e.preventDefault();
+
+    const newTicker = { ...chosenDate };
+
+    await fetch("http://localhost:5000/record/add", {
+      method: "POST",
+      HEADERS: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(newTicker),
+    })
+      .catch(err => {
+        window.alert(error);
+        return;
+      })
+    
+    setForm();
+    navigate('')
+  }
   // const onChange = (event, selectedDate) => {
   //   const currentDate = selectedDate;
   //   setShow(false);
   //   setDate(currentDate);
   // };
     const [isEnabled, setIsEnabled] = useState(false);
-    const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+  this.state = {title: ''}
     return (
       <SafeAreaView style={styles.container} >
          <ScrollView style={styles.scrollView}>
@@ -24,7 +46,8 @@ function TickerForm({ navigation }) {
           placeholder="Type your ticker title here"
           placeholderTextColor="cadetblue"
           keyboardType="numeric"
-          focusable={true}
+            focusable={true}
+            onChangeText={(text) => {this.setState({title: text})}}
           />
           <Text style={styles.titleText}>Ticker Description:</Text>
           <TextInput
@@ -53,8 +76,8 @@ function TickerForm({ navigation }) {
         value={isEnabled}
       />
           <TouchableOpacity
-               style = {styles.submitButton}
-              //  onPress = {
+            style={styles.submitButton}
+            onPress={() => {this.submit()}}
               >
                <Text style = {styles.submitButtonText}> Submit </Text>
           </TouchableOpacity>
