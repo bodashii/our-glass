@@ -1,20 +1,28 @@
-import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import LandingPage from './components/LandingPage'
+import LoginPage from './components/LoginPage'
+import RegisterPage from './components/RegisterPage'
+import ForgetPasswordPage from './components/ForgetPasswordPage'
+import HomePage from './components/HomePage'
 
-
-import Tabs from './navigation/Tabs'
-
-
-// authorize jwt if true dash else account/signup/login
-const Stack = createNativeStackNavigator();
+import './App.css'
 
 export default function App() {
 
   return (
-    <NavigationContainer>
-      <Tabs />
-    </NavigationContainer>
+    <Router>
+      <div>
+        <Switch>
+          <Route exact path="/" component={LandingPage} />
+          <Route path="/login" component={LoginPage} />
+          <Route path="/register" component={RegisterPage} />
+          <Route path="/forget-password" component={ForgetPasswordPage} />
+          <Route path="/home" component={HomePage} />
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
   );
 }
