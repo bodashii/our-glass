@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, Pressable, TextInput, TouchableOpacity } from "react-native";
-
+import { StyleSheet, ScrollView, Text, View, Pressable, TextInput, TouchableOpacity } from "react-native";
+import TickerCard from './TickerCard'
 
 
 
@@ -10,12 +10,8 @@ import { StyleSheet, Text, View, Pressable, TextInput, TouchableOpacity } from "
 function Dash({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>Tickers</Text>
-      <Text>Disappointment</Text>
-      <TextInput placeholder='username' type='text' />
-      <TouchableOpacity><Text>Submit</Text></TouchableOpacity>
-      
-
+      <ScrollView style={styles.scrollView}>
+      <TickerCard />
       <Pressable
         title='Account'
         onPress={() => navigation.navigate('Account')}
@@ -24,6 +20,7 @@ function Dash({ navigation }) {
         title='Create TimeBomb'
         onPress={() => navigation.navigate('TickerForm')}
       />
+      </ScrollView>
     </View>
   );
 }
@@ -34,6 +31,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#C5E063',
   },
 });
 
