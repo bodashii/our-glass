@@ -11,13 +11,8 @@ function Dash({ navigation }) {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.scrollView}>
-      <Text>Tickers</Text>
-      <Text>Disappointment</Text>
       <TickerCard />
       <TextInput placeholder='username' type='text' />
-      <TouchableOpacity><Text>Submit</Text></TouchableOpacity>
-      
-
       <Pressable
         title='Account'
         onPress={() => navigation.navigate('Account')}

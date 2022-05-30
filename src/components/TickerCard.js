@@ -9,12 +9,15 @@ const TickerCard = (props) => {
         <View style={styles.container}>
           <Card style={styles.card}>
             <Text style={styles.title}>
-              Timer Title will go here with the timer under it
+              TIMER TITLE WILL GO HERE
             </Text>
             <Countdown 
             timeTillDate="05 26 2019, 6:00 am" 
             timeFormat="MM DD YYYY, h:mm a" 
             />
+            <Text style={styles.username}>
+              Username
+            </Text>
           </Card>
         </View>
       </SafeAreaView>
@@ -33,12 +36,20 @@ const TickerCard = (props) => {
     title: {
         fontSize: 20,
         fontWeight: 'bold',
-        textAlign: 'left',
-        padding: 20,
+        textAlign: 'center',
+        paddingTop: 20,
+        marginBottom: 10,
         color: "white"
         },
     card: {
-        backgroundColor: "#5F9EA0"
+        backgroundColor: "#5F9EA0",
+        shadowRadius: 5
+    },
+    username: {
+        fontSize: 10,
+        textAlign: 'left',
+        padding: 15,
+        color: "white"
     }
   })
 

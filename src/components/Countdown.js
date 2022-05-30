@@ -47,38 +47,34 @@ class Countdown extends React.Component {
         }
         
         return (
-            
+           
                 <View style={styles.countdownWrapper}>
-                {days && (
+                    {days && (
                         <View style={styles.countdownItem}>
                             <SVGCircle radius={daysRadius} />
-                            
-                            <Text>{days}D</Text>
+                            <Text style={styles.cardText}>{days}D</Text>
                         </View>
                     )}
                     {hours && (
                          <View style={styles.countdownItem}>
                             <SVGCircle radius={hoursRadius} />
-                            
-                            <Text>{hours}H</Text>
+                            <Text style={styles.cardText}>{hours}H</Text>
                         </View>
                     )}
                     {minutes && (
                          <View style={styles.countdownItem}>
                             <SVGCircle radius={minutesRadius} />
-                            
-                            <Text>{minutes}M</Text>
+                        <Text style={styles.cardText}>{minutes}M</Text>
                         </View>
                     )}
                     {seconds && (
                          <View style={styles.countdownItem}>
                             <SVGCircle radius={secondsRadius} />
-                            
-                            <Text>{seconds}S</Text>
+                            <Text style={styles.cardText}>{seconds}S</Text>
                         </View>
                     )}
                 </View>
-           
+               
         )
     }
 }
@@ -89,9 +85,9 @@ const SVGCircle = ({ radius }) => (
     <Svg style={styles.countdownSvg}>
         <Path
             fill="none"
-            stroke="#333"
-            stroke-width="4"
-            d={describeArc(50, 50, 48, 0, radius)}
+            stroke="white"
+            stroke-width="1"
+            d={describeArc(50, 50, 28, 0, radius)}
         />
     </Svg>
 );
@@ -134,23 +130,34 @@ function mapNumber(number, in_min, in_max, out_min, out_max) {
 
 const styles = StyleSheet.create({
     countdownSvg: {
-        top: 0,
-        left: 0,
+        marginBottom: 10,
         width: 100,
         height: 100,
+        position: 'absolute',
     },
     countdownWrapper: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'around',
+        flexDirection:'row',
+        flexWrap:'wrap',
     },
     countdownItem: {
         color: 'white',
-        fontSize: 40,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        margin: 10,
+        marginTop: 10,
+        paddingTop: 5,
+        position: 'relative',
+        flexDirection: 'column',
+        width: 80,
+        height: 80,
+    },
+    cardText: {
+        color: 'white',
+        fontWeight: 'bold',
+        fontSize: 14
     }
   });
   
