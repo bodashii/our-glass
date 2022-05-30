@@ -52,25 +52,25 @@ class Countdown extends React.Component {
                     {days && (
                         <View style={styles.countdownItem}>
                             <SVGCircle radius={daysRadius} />
-                            <Text style={styles.cardText}>{days}D</Text>
+                            <Text style={styles.cardText}>{days}d</Text>
                         </View>
                     )}
                     {hours && (
                          <View style={styles.countdownItem}>
                             <SVGCircle radius={hoursRadius} />
-                            <Text style={styles.cardText}>{hours}H</Text>
+                            <Text style={styles.cardText}>{hours}h</Text>
                         </View>
                     )}
                     {minutes && (
                          <View style={styles.countdownItem}>
                             <SVGCircle radius={minutesRadius} />
-                        <Text style={styles.cardText}>{minutes}M</Text>
+                        <Text style={styles.cardText}>{minutes}m</Text>
                         </View>
                     )}
                     {seconds && (
                          <View style={styles.countdownItem}>
                             <SVGCircle radius={secondsRadius} />
-                            <Text style={styles.cardText}>{seconds}S</Text>
+                            <Text style={styles.cardText}>{seconds}s</Text>
                         </View>
                     )}
                 </View>
@@ -86,7 +86,7 @@ const SVGCircle = ({ radius }) => (
         <Path
             fill="none"
             stroke="white"
-            stroke-width="1"
+            strokeWidth="4"
             d={describeArc(50, 50, 28, 0, radius)}
         />
     </Svg>
