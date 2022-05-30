@@ -2,10 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import '../../App.css'
+import BackgroundImage from '../../assets//bglanding.png'
 
 export default function LandingPage() {
     return (
-        <header>
+        <header style={ HeaderStyle }>
             <h1 className="main-title text-center">login / register page</h1>
             <p className="main-para text-center">join us now and don't waste time</p>
             <div className="buttons text-center">
@@ -18,4 +19,13 @@ export default function LandingPage() {
             </div>
         </header>
     )
+}
+
+const HeaderStyle = {
+    width: "100%",
+    height: "100vh",
+    background: `url(${BackgroundImage})`,
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover"
 }
