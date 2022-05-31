@@ -18,12 +18,18 @@ function LandingPage({ navigation }) {
         <View style={styles.container}>
             <Text>login / register page</Text>
             <Text>Don't waste time! Join us now!</Text>
-            <TextInput name="password" placeholder="password" />
             <TextInput name="email" placeholder="email" />
+            <TextInput name="password" placeholder="password" />
+            <Text>Forgot password?</Text>
+            <Pressable
+                title='forgot password'
+                onPress={() => navigation.navigate('ForgetPasswordPage')}
+            />
             <Pressable
                 title='Log in'
                 onPress={() => navigation.navigate('LoginPage')}
             />
+            <Text>New to the site?</Text>
             <Pressable
                 title='Create an account'
                 onPress={() => navigation.navigate('RegisterPage')}

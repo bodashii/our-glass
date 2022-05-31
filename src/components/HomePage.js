@@ -1,13 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import {
+    StyleSheet,
+    Text,
+    View,
+    Pressable,
+    TextInput,
+    TouchableOpacity,
+} from "react-native";
+import { ButtonGroup, Text } from 'react-native-elements'
 
-export default function HomePage() {
+function HomePage({ navigation }) {
     return (
-        <div className="text-center">
-        <h1 className="main-title home-page-title">Welcome to Our-Glass!</h1>
-        <Link to="/">
-            <button className="primary-button">Log out</button>
-        </Link>
-        </div>
+        <View>
+            <Text>Welcome to Our-Glass!</Text>
+            <Pressable
+                title='Log out'
+                onPress={() => navigation.navigate('/')}
+            />
+        </View>
     )
 }
+
+export default HomePage

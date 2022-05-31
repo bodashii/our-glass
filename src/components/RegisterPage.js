@@ -1,9 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import {
+    StyleSheet,
+    Text,
+    View,
+    Pressable,
+    TextInput,
+    TouchableOpacity,
+} from "react-native";
+import { ButtonGroup, Text } from 'react-native-elements'
 
 import './App.css'
 
-export default function SignUpPage() {
+function SignUpPage({ navigation }) {
 
     return (
         <div className="text-center m-5-auto">
@@ -35,3 +44,5 @@ export default function SignUpPage() {
         </div>
     )
 }
+
+export default SignUpPage
