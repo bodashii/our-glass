@@ -1,23 +1,34 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import {
+    StyleSheet,
+    Text,
+    View,
+    Pressable,
+    TextInput,
+    TouchableOpacity,
+} from "react-native";
+import { ButtonGroup, Text } from 'react-native-elements'
 
 import './App.css'
 import BackgroundImage from '../../assets//bglanding.png'
 
-export default function LandingPage() {
+function LandingPage({ navigation }) {
     return (
-        <header style={ HeaderStyle }>
-            <h1 className="main-title text-center">login / register page</h1>
-            <p className="main-para text-center">join us now and don't waste time</p>
-            <div className="buttons text-center">
-                <Link to="/login">
-                    <button className="primary-button">log in</button>
-                </Link>
-                <Link to="/register">
-                    <button className="primary-button" id="reg_btn"><span>register </span></button>
-                </Link>
-            </div>
-        </header>
+        <View style={styles.container}>
+            <Text>login / register page</Text>
+            <Text>Don't waste time! Join us now!</Text>
+            <TextInput name="password" placeholder="password" />
+            <TextInput name="email" placeholder="email" />
+            <Pressable
+                title='Log in'
+                onPress={() => navigation.navigate('LoginPage')}
+            />
+            <Pressable
+                title='Create an account'
+                onPress={() => navigation.navigate('RegisterPage')}
+            />
+        </View>
     )
 }
 
@@ -29,3 +40,5 @@ const HeaderStyle = {
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover"
 }
+
+export default LandingPage

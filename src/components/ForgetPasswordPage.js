@@ -12,7 +12,7 @@ import { ButtonGroup, Text } from 'react-native-elements'
 
 
 
-export default function ForgetPasswordPage() {
+function ForgetPasswordPage({ navigation }) {
   return (
     <View style={styles.container}>
       <Text>Reset your password</Text>
@@ -67,3 +67,4 @@ export default function ForgetPasswordPage() {
   },
 });
 
+export default ForgetPasswordPage
