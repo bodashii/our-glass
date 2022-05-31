@@ -14,5 +14,5 @@ export default function App() {
     <NavigationContainer>
       <Tabs />
     </NavigationContainer>
-  );
+  )
 }
