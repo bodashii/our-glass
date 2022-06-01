@@ -1,18 +1,47 @@
 import React, { useState } from 'react';
-import { Text, Switch, ScrollView, SafeAreaView,  StyleSheet, TextInput, TouchableOpacity, Button, View} from "react-native";
+import { useMutation } from '@apollo/client';
+import { LOGIN } from '../utils/mutations';
+import Auth from '../utils/auth';
+import { Text, Switch, ScrollView, SafeAreaView, StyleSheet, TextInput, TouchableOpacity, Button, View } from "react-native";
 
-function LogIn({ navigation }) {
+
+
+function Login({ navigation } , props) {
+  const [formState, setFormState] = useState({ email: '', password: ' ' });
+  const [login, { error }] = useMutation(LOGIN);
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const mutationResponse = await login({
+        variables: { email: formState.email, password: formState.password },
+      });
+      const token = mutationResponse.data.login.token;
+      Auth.login(token);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    })
+  }
 
     return (
       <SafeAreaView style={styles.container} >
          <ScrollView style={styles.scrollView}>
           <Text style={styles.titleText}>User Name:</Text>
           <TextInput
-          style={styles.input}
-          placeholder="Type your ticker title here"
-          placeholderTextColor="cadetblue"
-          keyboardType="numeric"
-          focusable={true}
+            style={styles.input}
+            placeholder="Type your ticker title here"
+            placeholderTextColor="cadetblue"
+            keyboardType="numeric"
+            focusable={true}
+            onChange={handleChange}
           />
           <Text style={styles.titleText}>Password:</Text>
           <TextInput
@@ -20,7 +49,8 @@ function LogIn({ navigation }) {
           placeholder="Type description here (230 char max)"
           placeholderTextColor="cadetblue"
           keyboardType="numeric"
-          focusable={true}
+            focusable={true}
+            onChange={handleChange}
           />
           <Text style={styles.titleText}>Email:</Text>
           <TextInput
@@ -28,12 +58,13 @@ function LogIn({ navigation }) {
           placeholder="Type description here (230 char max)"
           placeholderTextColor="cadetblue"
           keyboardType="numeric"
-          focusable={true}
+            focusable={true}
+            onChange={handleChange}
           />      
      
           <TouchableOpacity
-               style = {styles.submitButton}
-              //  onPress = {
+            style={styles.submitButton}
+            onPress={handleFormSubmit}
               >
                <Text style = {styles.submitButtonText}> Submit </Text>
           </TouchableOpacity>
@@ -72,4 +103,4 @@ const styles = StyleSheet.create({
    }
 });
   
-export default LogIn
+export default Login
