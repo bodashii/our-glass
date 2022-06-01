@@ -1,24 +1,12 @@
 import React, { useState } from 'react';
 import { Text, Switch, ScrollView, SafeAreaView,  StyleSheet, TextInput, TouchableOpacity, Button, View} from "react-native";
-import DateTimePicker from '@react-native-community/datetimepicker';
 
-// use moment.js to grab current time and then get the difference
-// use function to create ticker element
+function LogIn({ navigation }) {
 
-function TickerForm({ navigation }) {
-  const [chosenDate, setChosenDate] = useState(new Date());
-
-  // const onChange = (event, selectedDate) => {
-  //   const currentDate = selectedDate;
-  //   setShow(false);
-  //   setDate(currentDate);
-  // };
-    const [isEnabled, setIsEnabled] = useState(false);
-    const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     return (
       <SafeAreaView style={styles.container} >
          <ScrollView style={styles.scrollView}>
-          <Text style={styles.titleText}>Ticker Title:</Text>
+          <Text style={styles.titleText}>User Name:</Text>
           <TextInput
           style={styles.input}
           placeholder="Type your ticker title here"
@@ -26,7 +14,7 @@ function TickerForm({ navigation }) {
           keyboardType="numeric"
           focusable={true}
           />
-          <Text style={styles.titleText}>Ticker Description:</Text>
+          <Text style={styles.titleText}>Password:</Text>
           <TextInput
           style={styles.input}
           placeholder="Type description here (230 char max)"
@@ -34,24 +22,15 @@ function TickerForm({ navigation }) {
           keyboardType="numeric"
           focusable={true}
           />
-      {/* <Text>selected: {date.toLocaleString()}</Text> */}
-        <Text style={styles.titleText}>Deadline:</Text>
-        {/* <DateTimePicker
-          testID="dateTimePicker"
-          value= {chosenDate}
-          mode="datetime"
-          is24Hour={true}
-          display= "spinner"
-          onDateChange={setChosenDate}
-          textColor="cadetblue"
-        />  */}
-        <Switch
-        trackColor={{ false: "#767577", true: "#81b0ff" }}
-        thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
-        ios_backgroundColor="#3e3e3e"
-        onValueChange={toggleSwitch}
-        value={isEnabled}
-      />
+          <Text style={styles.titleText}>Email:</Text>
+          <TextInput
+          style={styles.input}
+          placeholder="Type description here (230 char max)"
+          placeholderTextColor="cadetblue"
+          keyboardType="numeric"
+          focusable={true}
+          />      
+     
           <TouchableOpacity
                style = {styles.submitButton}
               //  onPress = {
@@ -93,4 +72,4 @@ const styles = StyleSheet.create({
    }
 });
   
-export default TickerForm
+export default LogIn

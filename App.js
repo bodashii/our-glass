@@ -8,6 +8,12 @@ import ForgetPasswordPage from './src/components/ForgetPasswordPage'
 import HomePage from './src/components/HomePage'
 
 import './src/components/App.css'
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Tabs from './navigation/Tabs'
+
+
+// authorize jwt if true dash else account/signup/login
+const Stack = createNativeStackNavigator();
 
 export default function App() {
 
