@@ -34,7 +34,7 @@ const TickerCard = (props) => {
             timeFormat="MM DD YYYY, h:mm a" 
             />
             <Text style={styles.username}>
-              Username
+              private
             </Text>
           </Card>
           <Card style={styles.card}>
@@ -46,7 +46,7 @@ const TickerCard = (props) => {
             timeFormat="MM DD YYYY, h:mm a" 
             />
             <Text style={styles.username}>
-              Username
+              public
             </Text>
           </Card>
           <Card style={styles.privateCard}>
@@ -58,7 +58,7 @@ const TickerCard = (props) => {
             timeFormat="MM DD YYYY, h:mm a" 
             />
             <Text style={styles.username}>
-            Username 
+            private 
             </Text>
           </Card>
           <Card style={styles.card}>
@@ -70,7 +70,7 @@ const TickerCard = (props) => {
             timeFormat="MM DD YYYY, h:mm a" 
             />
             <Text style={styles.username}>
-              Username
+              public
             </Text>
           </Card>
           <Card style={styles.card}>
@@ -82,7 +82,7 @@ const TickerCard = (props) => {
             timeFormat="MM DD YYYY, h:mm a" 
             />
             <Text style={styles.username}>
-              Username
+              public
             </Text>
           </Card>
           <Card style={styles.privateCard}>
@@ -94,7 +94,19 @@ const TickerCard = (props) => {
             timeFormat="MM DD YYYY, h:mm a" 
             />
             <Text style={styles.username}>
-              Username
+              private
+            </Text>
+          </Card>
+          <Card style={styles.privateCard}>
+            <Text style={styles.title}>
+              NATIONAL CHAMPIONSHIP GAME
+            </Text>
+            <Countdown 
+            timeTillDate="06 22 2022, 8:20 pm" 
+            timeFormat="MM DD YYYY, h:mm a" 
+            />
+            <Text style={styles.username}>
+              private
             </Text>
           </Card>
           <Card style={styles.card}>
@@ -106,7 +118,7 @@ const TickerCard = (props) => {
             timeFormat="MM DD YYYY, h:mm a" 
             />
             <Text style={styles.username}>
-              Username
+             public
             </Text>
           </Card>
           </View>
@@ -136,7 +148,7 @@ const TickerCard = (props) => {
         backgroundColor: "#5F9EA0",
         shadowRadius: 5,
         marginVertical: 10,
-        padding: 10
+        padding: 10,
     },
     privateCard: {
       backgroundColor: "#34403A",

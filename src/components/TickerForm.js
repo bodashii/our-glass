@@ -35,7 +35,7 @@ function TickerForm({ navigation }) {
           focusable={true}
           />
       {/* <Text>selected: {date.toLocaleString()}</Text> */}
-        <Text style={styles.titleText}>Deadline:</Text>
+        <Text style={styles.titleText}>Event Date:</Text>
         <DateTimePicker
           testID="dateTimePicker"
           value= {chosenDate}
@@ -52,6 +52,7 @@ function TickerForm({ navigation }) {
         ios_backgroundColor="#3e3e3e"
         onValueChange={toggleSwitch}
         value={isEnabled}
+        style={{marginTop: 10}}
       />
           <TouchableOpacity
                style = {styles.submitButton}
