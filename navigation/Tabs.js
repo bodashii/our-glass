@@ -25,10 +25,10 @@ const Tabs = () => {
                     height: 100,
                 }
             }}>
-        <Tab.Screen style={styles.shadow} name="Dash" component={Dash} />
-        <Tab.Screen name="Create" component={TickerForm} />
-        <Tab.Screen name="Account" component={Account} />
-        <Tab.Screen name="Login" component={LogIn} />
+        <Tab.Screen style={styles.shadow} name="OurGlass Dash" component={Dash} />
+        <Tab.Screen name="OurGlass Create" component={TickerForm} />
+        <Tab.Screen name="OurGlass Account" component={Account} />
+        <Tab.Screen name="OurGlass Login" component={LogIn} />
       </Tab.Navigator>
     );
 }
