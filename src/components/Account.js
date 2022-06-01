@@ -31,8 +31,8 @@ function Account({ navigation }) {
     >
       <Text>This is your account!</Text>
       <Pressable
-        title='ourGlass'
-        onPress={() => navigation.navigate('ourGlass')}
+        title='Log In'
+        onPress={() => navigation.navigate('Dash')}
       />
     </View>
   );
