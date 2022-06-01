@@ -92,6 +92,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       padding: 20,
       margin: 20,
+      
     },
     submitButton: {
       backgroundColor: 'cadetblue',
@@ -103,9 +104,12 @@ const styles = StyleSheet.create({
    submitButtonText:{
       color: 'white',
       textAlign: 'center',
+      fontWeight: 'bold',
    },
    titleText: {
-     fontSize: 16
+     fontSize: 16,
+     fontWeight: 'bold',
+     color: '#34403A'
    }
 });
 
