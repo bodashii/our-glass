@@ -1,28 +1,29 @@
 {
   "name": "our-glass",
   "version": "1.0.0",
-  "description": "Event Countdown Social Media App",
-  "main": "server.js",
+  "description": "This is the finished code from a tutorial that I wrote about saving data to a MongoDB database from a Node.js Application. You can read the tutorial to get step-by-step instructions on how to save data to a MongoDB database.",
+  "main": "app.js",
   "scripts": {
-    "test": "test.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maddnty/our-glass.git"
   },
-  "keywords": [
-    "our-glass"
-  ],
-  "author": "Mark Estrada",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/maddnty/our-glass/issues"
   },
   "homepage": "https://github.com/maddnty/our-glass#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "express-graphql": "^0.12.0",
     "graphql": "^15.8.0",
+    "graphql-tag": "^2.12.6",
     "mongodb": "^4.6.0"
   }
 }
