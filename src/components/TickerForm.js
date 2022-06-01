@@ -47,7 +47,7 @@ function TickerForm({ navigation }) {
         />
         <Text style={styles.titleText}>{isEnabled ? 'Display: Public' : 'Display: Private'}</Text>
         <Switch
-        trackColor={{ false: "#767577", true: "cadet" }}
+        trackColor={{ false: "#767577", true: "cadetblue" }}
         thumbColor={isEnabled ? "#C5E063" : "#f4f3f4"}
         ios_backgroundColor="#3e3e3e"
         onValueChange={toggleSwitch}
