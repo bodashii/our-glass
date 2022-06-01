@@ -1,48 +1,38 @@
-const { Ticker, User } = require("../models");
+const { AuthenticationError } = require("apollo-server-express");
+const { User } = require("../models");
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    ticker: async () => {
-      return Ticker.findOne({ _id });
-    },
-    tickers: async () => {
-      const params = title ? { Ticker } : {};
-      return Ticker.find(params).sort({ createdAt: -1 });
-    },
-    user: async () => {
-      return User.findOne({ _id });
-    },
-    users: async () => {
-      return User.find();
-    },
-  },
-};
-
-// A map of functions which return data for the schema.
-const resolvers = {
-  Query: {
-    ticker: async () => {
-      return Ticker.findOne({ _id });
-    },
-    tickers: async () => {
-      const params = title ? { Ticker } : {};
-      return Ticker.find(params).sort({ createdAt: -1 });
-    },
-    user: async (parent, args) => {
-      return User.findOne({ _id });
-    },
-    users: async () => {
-      return User.find();
-    },
+    user: async (parent, args, context) => {
+      return user;
+    }
   },
   Mutation: {
-    addUser:  async (parent, args) => {
-      const user =  await User.create(args);
-      
-      return { user };
+    addUser: async (parent, args) => {
+      const user = await User.create(args);
+      const token = signToken(user);
     },
-  },
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
+
+      if (!user) {
+        throw new AuthenticationError('Incorrect credentials');
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError('Incorrect credentials');
+      }
+
+      const token = signToken(user);
+
+      return { token, user };
+    }
+  }
 };
+
 
 
 module.exports = resolvers;
