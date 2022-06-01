@@ -11,7 +11,7 @@ var schema = buildSchema(`
 
 // Root resolver
 var root = { 
-  hello: () => 'Hello world!'
+  hello: () => 'Hello Mark!'
 };
 
 // Create an express server and a GraphQL endpoint
