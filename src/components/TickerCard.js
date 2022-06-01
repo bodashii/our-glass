@@ -25,12 +25,12 @@ const TickerCard = (props) => {
         }
       >
           <View style={styles.container}>
-          <Card style={styles.card}>
+          <Card style={styles.privateCard}>
             <Text style={styles.title}>
-              REST DAY AFTER PROJECT
+              CELEBRATION DINNER
             </Text>
             <Countdown 
-            timeTillDate="06 01 2022, 4:30 pm" 
+            timeTillDate="06 02 2022, 6:30 pm" 
             timeFormat="MM DD YYYY, h:mm a" 
             />
             <Text style={styles.username}>
@@ -49,7 +49,7 @@ const TickerCard = (props) => {
               Username
             </Text>
           </Card>
-          <Card style={styles.card}>
+          <Card style={styles.privateCard}>
             <Text style={styles.title}>
               END OF CUT
             </Text>
@@ -85,7 +85,7 @@ const TickerCard = (props) => {
               Username
             </Text>
           </Card>
-          <Card style={styles.card}>
+          <Card style={styles.privateCard}>
             <Text style={styles.title}>
               FLEET FOXES CONCERT
             </Text>
@@ -135,7 +135,14 @@ const TickerCard = (props) => {
     card: {
         backgroundColor: "#5F9EA0",
         shadowRadius: 5,
-        marginVertical: 10
+        marginVertical: 10,
+        padding: 10
+    },
+    privateCard: {
+      backgroundColor: "#34403A",
+      shadowRadius: 5,
+      marginVertical: 10,
+      padding: 10
     },
     username: {
         fontSize: 10,

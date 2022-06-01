@@ -55,9 +55,9 @@ function TickerForm({ navigation }) {
       />
           <TouchableOpacity
                style = {styles.submitButton}
-              //  onPress = {
+               onPress = {() => navigation.navigate('Dash')}
               >
-               <Text style = {styles.submitButtonText}> Submit </Text>
+               <Text style = {styles.submitButtonText}> Create </Text>
           </TouchableOpacity>
         </ScrollView>
       </SafeAreaView>
