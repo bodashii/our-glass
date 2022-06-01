@@ -54,6 +54,7 @@ function Account({ navigation }) {
           <Text style={styles.titleText}>Password:</Text>
           <TextInput
           style={styles.input}
+          secureTextEntry={true}
           placeholder="Type password here"
           placeholderTextColor="cadetblue"
           keyboardType="numeric"
