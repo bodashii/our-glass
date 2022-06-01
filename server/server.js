@@ -1,85 +1,18 @@
 const express = require("express");
-const { ApolloServer, gql } = require("apollo-server-express");
+const { ApolloServer } = require("apollo-server-express");
+const path = require("path");
 
-// const typeDefs = gql`
-//   type Query {
-//     "A simple type for getting started!"
-//     hello: String
-//   }
-// `;
-
-const typeDefs = gql`
-  type User {
-    _id: ID
-    username: String
-    email: String
-    password: String
-    tickers: [Ticker]
-  }
-  type Ticker {
-    _id: ID
-    title: String
-    createdAt: String
-    endDate: String
-    username: String
-    descr: String
-  }
-
-  type Query {
-    user(id: ID!): User
-  }
-  type Query {
-    ticker(id: ID!): Ticker
-  }
-  type Query {
-    tickers(id: ID!): Ticker
-  }
-  type Query {
-    users(id: ID!): User
-  }
-
-  type Mutation {
-    addUser(
-        username: String!, 
-        email: String!, 
-        password: String!): User
-    }
-`;
-// A map of functions which return data for the schema.
-const resolvers = {
-  Query: {
-    ticker: async () => {
-      return Ticker.findOne({ _id });
-    },
-    tickers: async () => {
-      const params = title ? { Ticker } : {};
-      return Ticker.find(params).sort({ createdAt: -1 });
-    },
-    user: async () => {
-      return User.findOne({ _id });
-    },
-    users: async () => {
-      return User.find();
-    },
-  },
-  Mutation: {
-    addUser: async (parent, args) => {
-      const user = await User.create(args);
-
-      return { user };
-    },
-  },
-};
-
+const { typeDefs, resolvers } = require("./schemas");
+const { authMiddleware } = require("./utils/auth");
 const db = require("./config/connection");
 
 const PORT = process.env.PORT || 3001;
+const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context: authMiddleWare,
 });
-
-const app = express();
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

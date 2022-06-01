@@ -39,6 +39,6 @@ tickerSchema.virtual('commentCount').get(function () {
     return this.comments.length
 })
 
-const Ticker = model('Thought', tickerSchema);
+const Ticker = model('Ticker', tickerSchema);
 
 module.exports = Ticker
