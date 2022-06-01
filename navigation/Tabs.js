@@ -5,7 +5,7 @@ import { StyleSheet, Image, Text, View, TouchableOpacity } from 'react-native';
 import Dash from '../src/components/Dash';
 import Account from '../src/components/Account';
 import TickerForm from '../src/components/TickerForm';
-import LogIn from '../src/components/Login.js';
+import LogIn from '../src/pages/Login';
 
 const Tab = createBottomTabNavigator();
 

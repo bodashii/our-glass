@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
-import { Text, Switch, ScrollView, SafeAreaView, StyleSheet, TextInput, TouchableOpacity, Button, View } from "react-native";
+import { Text, ScrollView, SafeAreaView, StyleSheet, TextInput, TouchableOpacity } from "react-native";
 
 
 
