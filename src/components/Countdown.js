@@ -18,8 +18,9 @@ class Countdown extends React.Component {
         this.interval = setInterval(() => {
             const { timeTillDate, timeFormat } = this.props;
             const then = moment(timeTillDate, timeFormat);
+            moment.locale('en')
             const now = moment();
-            const countdown = moment(then - now)
+            const countdown = moment(then - now);
             const seconds = countdown.format('ss')
             const minutes = countdown.format('mm')
             const hours = countdown.format('HH')
@@ -40,9 +41,12 @@ class Countdown extends React.Component {
         const secondsRadius = mapNumber(seconds, 60, 0, 0, 360);
         const minutesRadius = mapNumber(minutes, 60, 0, 0, 360);
         const hoursRadius = mapNumber(hours, 24, 0, 0, 360);
-        const daysRadius = mapNumber(days, 30, 0, 0, 360);
+        const daysRadius = mapNumber(days, 31, 0, 0, 360);
 
         if (!seconds) {
+            return null;
+        }
+        if (!days) {
             return null;
         }
         
@@ -52,25 +56,25 @@ class Countdown extends React.Component {
                     {days && (
                         <View style={styles.countdownItem}>
                             <SVGCircle radius={daysRadius} />
-                            <Text style={styles.cardText}>{days}D</Text>
+                            <Text style={styles.cardText}>{days}d</Text>
                         </View>
                     )}
                     {hours && (
                          <View style={styles.countdownItem}>
                             <SVGCircle radius={hoursRadius} />
-                            <Text style={styles.cardText}>{hours}H</Text>
+                            <Text style={styles.cardText}>{hours}h</Text>
                         </View>
                     )}
                     {minutes && (
                          <View style={styles.countdownItem}>
                             <SVGCircle radius={minutesRadius} />
-                        <Text style={styles.cardText}>{minutes}M</Text>
+                        <Text style={styles.cardText}>{minutes}m</Text>
                         </View>
                     )}
                     {seconds && (
                          <View style={styles.countdownItem}>
                             <SVGCircle radius={secondsRadius} />
-                            <Text style={styles.cardText}>{seconds}S</Text>
+                            <Text style={styles.cardText}>{seconds}s</Text>
                         </View>
                     )}
                 </View>
@@ -86,7 +90,11 @@ const SVGCircle = ({ radius }) => (
         <Path
             fill="none"
             stroke="white"
+<<<<<<< HEAD
             strokeWidth="1"
+=======
+            strokeWidth="4"
+>>>>>>> d937575cbf62b5cccb4f502936003e074eb84fe3
             d={describeArc(50, 50, 28, 0, radius)}
         />
     </Svg>

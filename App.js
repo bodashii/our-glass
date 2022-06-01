@@ -8,6 +8,8 @@ import ForgetPasswordPage from './src/components/ForgetPasswordPage'
 import HomePage from './src/components/HomePage'
 
 import './src/components/App.css'
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Tabs from './navigation/Tabs'
 

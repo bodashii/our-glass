@@ -44,10 +44,15 @@ function TickerForm({ navigation }) {
           display= "spinner"
           onDateChange={setChosenDate}
           textColor="cadetblue"
+<<<<<<< HEAD
         />  */}
+=======
+        />
+        <Text style={styles.titleText}>{isEnabled ? 'Display: Public' : 'Display: Private'}</Text>
+>>>>>>> d937575cbf62b5cccb4f502936003e074eb84fe3
         <Switch
-        trackColor={{ false: "#767577", true: "#81b0ff" }}
-        thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
+        trackColor={{ false: "#767577", true: "cadetblue" }}
+        thumbColor={isEnabled ? "#C5E063" : "#f4f3f4"}
         ios_backgroundColor="#3e3e3e"
         onValueChange={toggleSwitch}
         value={isEnabled}
@@ -70,6 +75,7 @@ const styles = StyleSheet.create({
       borderWidth: 1,
       padding: 10,
       borderRadius: 5,
+      color: '#34403A'
     },
     container: {
       flex: 1,
@@ -87,9 +93,12 @@ const styles = StyleSheet.create({
    submitButtonText:{
       color: 'white',
       textAlign: 'center',
+      fontWeight: 'bold',
    },
    titleText: {
-     fontSize: 16
+     fontSize: 16,
+     fontWeight: 'bold',
+     color: '#34403A'
    }
 });
   
