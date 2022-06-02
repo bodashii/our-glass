@@ -39,7 +39,6 @@ This application is covered by the MIT license.
 ![badge](https://img.shields.io/badge/-CSS-orange)<br>
 ![badge](https://img.shields.io/badge/-Javascript-blue)
 ![badge](https://img.shields.io/badge/-node.js-blue)
-![badge](https://img.shields.io/badge/-Inquirer-blue)
 ![badge](https://img.shields.io/badge/-json-blue)
 ![badge](https://img.shields.io/badge/-npm-blue)
 ![badge](https://img.shields.io/badge/-Expo-blue)
@@ -50,10 +49,10 @@ This application is covered by the MIT license.
 Run the following command at the root of your project: npm install<br>
   
 ## Screenshot
-![PORTFOLIO CHALLENGE - ESTRADA](https://github.com/hmarkestrad/Professional-README-Generator/blob/705fcdd57d6157c38c7fd9dd3aecc267b9800476/Screen%20Shot.png)
+![ourglass screenshot](ourglassDash.PNG)
   
 ## Questions  
-GitHub: [maddnty](https://github.com/maddnty)<br>
+GitHub: [maddnty](https://github.com/maddnty/our-glass)<br>
 To learn React, check out the [React documentation](https://reactjs.org/).<br>
 Contact me with any questions: h.mark.estrada@gmail.com<br>
 Copyright 2022 © AllRights Reserved.<br>
