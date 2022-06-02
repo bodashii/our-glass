@@ -22,12 +22,12 @@ MongoDB
 Node.js
 Express
 
-## Directión For Future Development 🕶:
 
-## Website 🖱️:
 ## Screenshot 📸:
 ![ourglass screenshot](./ourglassDash.PNG)
 
+## Website 🖱️:
+## Directión For Future Development 🕶:
 ## Contribution 👨‍💻:
 #### Nicolas Y.
 #### Brandon H.
