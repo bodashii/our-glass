@@ -11,12 +11,21 @@ Our-Glass is a multifunction countdown app, that allows the user to keep track o
 As a busy person, I'd like to have an app that keeps me in check with the things that are going on in my everyday life and be able to catch up with my freinds and familys' occassions.
 
 ## Built With 💻:
-my brain is fried.exe
+React
+React Native
+Expo
+GraphQL
+Expo
+Javascript
+Mongoose
+MongoDB
+Node.js
+Express
 
 ## Directión For Future Development 🕶:
 
 ## Website 🖱️:
-
+![ourglass screenshot](./ourglassDash.PNG)
 ## Screenshot 📸:
 
 ## Contribution 👨‍💻:
